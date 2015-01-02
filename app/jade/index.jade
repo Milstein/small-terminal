@@ -7,21 +7,22 @@ block content
 				#l-camera-light
 			#l-lid-inner
 				#terminal
-					p
-						| [
-						span.term-font-blue Macbook
-						| ] 
-						span.term-font-blue | 
-						| [
-						span.term-font-green ~
-						| ]
-					br
-					#term-user-bar
-						p
-							| [
-							span.term-font-green User
-							| ]$ 
-						input(type="text")
+					#term-inner
+						//- p
+						//- 	| [
+						//- 	span.term-font-blue Macbook
+						//- 	| ] 
+						//- 	span.term-font-blue | 
+						//- 	| [
+						//- 	span.term-font-green ~
+						//- 	| ]
+						//- br
+						#term-user-bar
+							p
+								| [
+								span.term-font-green User
+								| ]$ 
+							input(type="text" id="term-command")
 		#l-bottom
 			#l-bottom-dent
 				#l-bottom-dent-inner

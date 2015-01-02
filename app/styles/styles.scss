@@ -101,49 +101,62 @@ $terminal:#34352d;
 
 #terminal {
 	padding: 10px;
-	p,span,input {
-		font-family: 'Ubuntu Mono', ;
-	}
-	p {
-		color:white;
-		padding: 0;
-		margin: 0;
-		float: left;
-		span.term-font-blue {color:#7a80d3}
-		span.term-font-green {color:#79d17d}
-	}
-	#term-user-bar {
-		position: relative;
-		width:100%;
-		float:left;
+	height: 100%;
+	width: 100%;
+	#term-inner {
+		height: 100%;
+		width: 100%;
+		overflow: scroll;
+		height: 100%;
+		width: 100%;
+		p,span,input {
+			font-family: 'Ubuntu Mono', ;
+		}
 		p {
-			position: absolute;
-			top:0;
-			left:0;
-
-		}
-		input {
-			background: none;
-			border:none;
-			margin: 0;
-			padding: 0;
-			display: block;
-			padding-left:10px;
 			color:white;
-			padding-left:55px;
-			width:100%;
-			&:focus {
-				border:none!important;
-				outline: 0;
-			}
-
+			padding: 0;
+			margin: 0;
+			float: left;
+			span.term-font-blue {color:#7a80d3}
+			span.term-font-green {color:#79d17d}
 		}
-	}
-	.term-left {
-		float:left;
-	}
-	#cursor {
-		content:"|";
-		display:block;
+		p#term-output {
+			width:100%;
+			float:left;
+		}
+		#term-user-bar {
+			position: relative;
+			width:100%;
+			float:left;
+			p {
+				position: absolute;
+				top:0;
+				left:0;
+
+			}
+			input {
+				background: none;
+				border:none;
+				margin: 0;
+				padding: 0;
+				display: block;
+				padding-left:10px;
+				color:white;
+				padding-left:55px;
+				width:100%;
+				&:focus {
+					border:none!important;
+					outline: 0;
+				}
+
+			}
+		}
+		.term-left {
+			float:left;
+		}
+		#cursor {
+			content:"|";
+			display:block;
+		}
 	}
 }
