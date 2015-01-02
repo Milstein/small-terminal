@@ -1,0 +1,35 @@
+extends layouts/base
+block content
+	#laptop
+		#l-lid
+			#l-camera
+				#l-camera-lense
+				#l-camera-light
+			#l-lid-inner
+				#terminal
+					p
+						| [
+						span.term-font-blue Macbook
+						| ] 
+						span.term-font-blue | 
+						| [
+						span.term-font-green ~
+						| ]
+					br
+					#term-user-bar
+						p
+							| [
+							span.term-font-green User
+							| ]$ 
+						input(type="text")
+		#l-bottom
+			#l-bottom-dent
+				#l-bottom-dent-inner
+			ul.l-grill#l-left
+				li 
+				li 
+				li 
+			ul.l-grill#l-right
+				li 
+				li 
+				li 
