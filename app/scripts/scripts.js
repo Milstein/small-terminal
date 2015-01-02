@@ -5,24 +5,45 @@
 // 	alert(e.which);
 // })
 
+var help = "See a list of commands below: 
+<br> 
+- Who are you? 
+<br> 
+- What do you do?
+<br> 
+- Who made this?";
+var notFound = "Command not found! Use 'help' for a list of commands";
+var whoAreYou = "We are some really cool developers who love what we do. See our 'about us' page for more <3";
+var whatDoYouDo = "We build lots of really awesome things";
+var whoMadeThis = "Jonjoe Whitfield our lead developer got a little bit bored and a little bit drunk one night and decided to build it :D";
 
-$("#term-command").keypress(function(e){
+$("#terminal").keypress(function(e){
 	function output(o){
-		$("#terminal>#term-inner").append("<p id='term-output'>"+o+"</p>")
+		$("#term-user-bar").remove()		
+		$("#terminal>#term-inner").append("<p id='term-output'>[<span class='term-font-green'>User</span>]$ "+cmd+"</p>");
+		$("#terminal>#term-inner").append("<p id='term-output'>"+o+"</p>");
+		$("#terminal>#term-inner").append("<div id='term-user-bar'><p>[<span class='term-font-green'>User</span>]$ </p><input id='term-command' type='text'></div>");
+		$("#term-command").focus();
 	}
 
 	if (e.which === 13) {
-		// console.log($("#term-command").val());
+		console.log($("#term-command").val());
 		var cmd = $("#term-command").val();
 		switch(cmd){
 			case "help":
-				output("help!");
+				output(help);
 				break;
-			case "mom":
-				output("night!");
+			case "Who are you?":
+				output(whoAreYou);
+				break;
+			case "What do you do?":
+				output(whatDoYouDo);
+				break;
+			case "Who made this?":
+				output(whoMadeThis);
 				break;
 			default:
-				output("Command not found! Use 'help' for a list of commands");
+				output(notFound);
 				break;
 		}
 	};
